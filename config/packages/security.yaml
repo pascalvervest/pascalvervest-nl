@@ -23,6 +23,8 @@ security:
             form_login:
                 login_path: login
                 check_path: login
+            logout:
+                path: app_logout
 
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
