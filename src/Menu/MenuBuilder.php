@@ -23,6 +23,7 @@ class MenuBuilder
 
         $menu->addChild('home', [
             'route' => 'homepage',
+            'label' => 'app.menu.public.main.home',
             'attributes' => [
                 'class' => 'nav-item',
             ],
@@ -33,6 +34,7 @@ class MenuBuilder
 
         $menu->addChild('blog', [
             'route' => 'app_blog_index',
+            'label' => 'app.menu.public.main.blog',
             'attributes' => [
                 'class' => 'nav-item',
             ],
@@ -51,6 +53,7 @@ class MenuBuilder
 
         $menu->addChild('dashboard', [
             'route' => 'app_admin_index',
+            'label' => 'app.menu.admin.main.dashboard',
             'linkAttributes' => [
                 'class' => 'nav-link text-white',
             ],
@@ -58,6 +61,7 @@ class MenuBuilder
 
         $menu->addChild('blog', [
             'route' => 'app_adminblog_index',
+            'label' => 'app.menu.admin.main.blog',
             'linkAttributes' => [
                 'class' => 'nav-link text-white',
             ],
@@ -73,6 +77,7 @@ class MenuBuilder
 
         $menu->addChild('settings', [
             'route' => 'app_admin_index',
+            'label' => 'app.menu.admin.user.settings',
             'linkAttributes' => [
                 'class' => 'dropdown-item',
             ],
@@ -80,6 +85,7 @@ class MenuBuilder
 
         $menu->addChild('logout', [
             'route' => 'app_logout',
+            'label' => 'app.menu.admin.user.logout',
             'linkAttributes' => [
                 'class' => 'dropdown-item',
             ],

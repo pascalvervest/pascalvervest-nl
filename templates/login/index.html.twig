@@ -5,17 +5,19 @@
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
+    <h1 class="display-6">{{ 'app.form.login.title'|trans }}</h1>
+
     <form action="{{ path('login') }}" method="post">
         <div class="form-floating mb-3">
             <input type="email" class="form-control" id="floatingInput" name="_username" value="{{ last_username }}" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+            <label for="floatingInput">{{ 'app.form.login.email'|trans }}</label>
         </div>
         <div class="form-floating mb-3">
             <input type="password" class="form-control" id="floatingPassword" name="_password" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+            <label for="floatingPassword">{{ 'app.form.login.password'|trans }}</label>
         </div>
         <div class="mb-3">
-            <button type="submit" class="btn btn-primary">login</button>
+            <button type="submit" class="btn btn-primary">{{ 'app.form.login.submit'|trans }}</button>
         </div>
     </form>
 {% endblock %}

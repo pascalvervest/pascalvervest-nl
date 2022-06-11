@@ -1,0 +1,19 @@
+app:
+  form:
+    login:
+      title: Please log in to continue
+      email: Email address
+      password: Password
+      submit: Log in
+  menu:
+    public:
+      main:
+        home: Home
+        blog: Blog
+    admin:
+      main:
+        dashboard: Dashboard
+        blog: Blog
+      user:
+        settings: Settings
+        logout: Sign off
