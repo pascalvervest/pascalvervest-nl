@@ -8,4 +8,4 @@ app_logout:
 
 homepage:
     path: /
-    controller: App\Controller\Public\PublicController::index
+    controller: App\Controller\Public\HomeController::index
