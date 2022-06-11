@@ -41,18 +41,18 @@ class CreateUserCommand extends Command
         $output->writeln([
             'User Creator',
             '============',
-            ''
+            '',
         ]);
 
         $helper = $this->getHelper('question');
 
         $emailQuestion = new Question('Enter username: ');
-        $passwordQuestion = new Question("Enter password: ");
+        $passwordQuestion = new Question('Enter password: ');
 
         $email = $helper->ask($input, $output, $emailQuestion);
         $password = $helper->ask($input, $output, $passwordQuestion);
 
-        if (!$email && !$password) {
+        if (! $email && ! $password) {
             return Command::INVALID;
         }
 
