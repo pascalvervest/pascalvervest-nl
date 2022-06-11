@@ -2,21 +2,17 @@
 
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class PublicController extends AbstractController
+class BlogController extends AbstractController
 {
-    #[Route('/public/index')]
+    #[Route('/admin/blog')]
     public function index(): Response
     {
-        $number = random_int(1, 10);
-
-        return $this->render('public/index.html.twig', [
-            'number' => $number,
-        ]);
+        return $this->render('admin/blog/index.html.twig');
     }
 }

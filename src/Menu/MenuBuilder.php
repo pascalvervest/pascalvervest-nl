@@ -33,7 +33,7 @@ class MenuBuilder
         ]);
 
         $menu->addChild('blog', [
-            'route' => 'app_blog_index',
+            'route' => 'app_public_blog_index',
             'label' => 'app.menu.public.main.blog',
             'attributes' => [
                 'class' => 'nav-item',
@@ -52,7 +52,7 @@ class MenuBuilder
         $menu->setChildrenAttribute('class', 'nav nav-pills flex-column mb-auto');
 
         $menu->addChild('dashboard', [
-            'route' => 'app_admin_index',
+            'route' => 'app_admin_dashboard_index',
             'label' => 'app.menu.admin.main.dashboard',
             'linkAttributes' => [
                 'class' => 'nav-link text-white',
@@ -60,7 +60,7 @@ class MenuBuilder
         ]);
 
         $menu->addChild('blog', [
-            'route' => 'app_adminblog_index',
+            'route' => 'app_admin_blog_index',
             'label' => 'app.menu.admin.main.blog',
             'linkAttributes' => [
                 'class' => 'nav-link text-white',
@@ -76,7 +76,7 @@ class MenuBuilder
         $menu->setChildrenAttribute('class', 'dropdown-menu dropdown-menu-dark text-small shadow');
 
         $menu->addChild('settings', [
-            'route' => 'app_admin_index',
+            'route' => 'app_admin_dashboard_index',
             'label' => 'app.menu.admin.user.settings',
             'linkAttributes' => [
                 'class' => 'dropdown-item',
