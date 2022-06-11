@@ -5,3 +5,7 @@ controllers:
 app_logout:
     path: /logout
     methods: GET
+
+homepage:
+    path: /
+    controller: App\Controller\PublicController::index
