@@ -1,0 +1,8 @@
+parameters:
+    tmpDir: var/cache/phpstan
+    level: 2
+    paths:
+        - src
+    fileExtensions:
+        - php
+    inferPrivatePropertyTypeFromConstructor: true
