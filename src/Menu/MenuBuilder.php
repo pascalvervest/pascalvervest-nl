@@ -16,6 +16,34 @@ class MenuBuilder
         $this->factory = $factory;
     }
 
+    public function createMainMenu(array $options): ItemInterface
+    {
+        $menu = $this->factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'navbar-nav me-auto mb-2 mb-lg-0');
+
+        $menu->addChild('home', [
+            'route' => 'homepage',
+            'attributes' => [
+                'class' => 'nav-item',
+            ],
+            'linkAttributes' => [
+                'class' => 'nav-link',
+            ],
+        ]);
+
+        $menu->addChild('blog', [
+            'route' => 'app_blog_index',
+            'attributes' => [
+                'class' => 'nav-item',
+            ],
+            'linkAttributes' => [
+                'class' => 'nav-link',
+            ],
+        ]);
+
+        return $menu;
+    }
+
     public function createAdminMainMenu(array $options): ItemInterface
     {
         $menu = $this->factory->createItem('root');

@@ -11,6 +11,19 @@
         {% endblock %}
     </head>
     <body>
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">pascalvervest.nl</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    {{ knp_menu_render('main') }}
+                </div>
+            </div>
+        </nav>
+
         <div class="col-lg-8 mx-auto p-3 py-md-5">
             <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
                 <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
@@ -18,7 +31,7 @@
                 </a>
             </header>
 
-            <main>
+            <main class="container">
                 {% block body %}{% endblock %}
             </main>
 
