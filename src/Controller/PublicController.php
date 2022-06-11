@@ -10,9 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PublicController extends AbstractController
 {
-    /**
-     * @Route("/public/index")
-     */
+    #[Route('/public/index')]
     public function index(): Response
     {
         $number = random_int(1, 10);
