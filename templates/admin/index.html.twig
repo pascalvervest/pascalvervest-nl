@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Pascal Vervest">
+        <title>{% block title %}pascalvervest.nl{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('admin') }}
+        {% endblock %}
+    </head>
+    <body>
+
+    {% block body %}
+        <main class="d-flex flex-nowrap">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    <span class="fs-4">Sidebar</span>
+                </a>
+                <hr>
+                {{ knp_menu_render('admin_main') }}
+                <hr>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/pascalvervest.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>{{ app.user.email }}</strong>
+                    </a>
+                    {{ knp_menu_render('admin_user') }}
+                </div>
+            </div>
+            <div class="b-divider b-vr"></div>
+        </main>
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('admin') }}
+    {% endblock %}
+    </body>
+</html>
